@@ -1,0 +1,101 @@
+html, body, #root {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  /* margin-bottom: 10px; */
+  background-color: #373b32;
+  filter: drop-shadow(7px 7px 10px rgb(140, 138, 138));
+}
+
+.hero p {
+  margin-left: 40px;
+  font-size: 1.6em;
+  color: #ead7d7;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  max-width: 200px;
+  max-height: 357px;
+  padding: 20px;
+  padding-bottom: 40px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  filter: drop-shadow(7px 7px 10px rgb(140, 138, 138));
+  background: linear-gradient(180deg,#f3f6e2,#44493e);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #024d5f;
+}
+.subtitle {
+  color:#022d37;
+}
+
+.description {
+  color: #a69d98
+}
+
+figure {
+  margin: 0;
+}
+
+.image {
+  display: contents;
+}
+
+img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  mix-blend-mode: multiply;
+  border-radius: inherit;
+}
+
+/* TODO: need to adjust text on queries by `em's` */
+@media only screen and (max-width: 1200px){
+  /*Tablets [601px -> 1200px]*/
+  /* body {
+    background-color: rgb(42, 72, 105);
+  } */
+}
+@media only screen and (max-width: 600px){
+  /*Big smartphones [426px -> 600px]*/
+  /* body {
+    background-color: rgb(15, 38, 62); 
+  } */
+  
+}
+@media only screen and (max-width: 425px){
+  /*Small smartphones [325px -> 425px]*/
+  /* body {
+    background-color: rgb(123, 136, 150);
+  } */
+  .card {
+    width: 65%;
+  }
+}
