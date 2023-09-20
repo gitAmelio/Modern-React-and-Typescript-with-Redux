@@ -1,0 +1,16 @@
+/* img {
+  width: 100px;
+} */
+
+.animal-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.app {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}

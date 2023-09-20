@@ -10,9 +10,11 @@ html, body, #root {
   display: flex;
   align-items: center;
   height: 70px;
-  /* margin-bottom: 10px; */
   background-color: #373b32;
   filter: drop-shadow(7px 7px 10px rgb(140, 138, 138));
+  border-bottom: ridge;
+  border-color: #373b32;
+  border-width: medium;
 }
 
 .hero p {
