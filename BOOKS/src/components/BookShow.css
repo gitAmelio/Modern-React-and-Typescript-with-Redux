@@ -1,0 +1,60 @@
+.book-show-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  background-color: #FFF;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px rgba(0,0,0,.2);
+  position: relative;
+  margin-bottom: 15px;
+  height: 300px;
+  width: 200px;
+  /* background-image: url("https://picsum.photos/seed/${id}/200/300") */
+}
+
+.book-controls {
+  
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  color: white;
+  background-color: black;
+}
+.book-delete-icon {
+  transition: color ease-in-out .3s;
+}
+.book-edit-icon, .book-no-edit-icon {
+  transition: opacity ease-in-out .3s;
+}
+.book-edit-icon {
+  color: blue;
+}
+.book-delete-icon:hover {
+  color: red;
+}
+.book-edit-icon:hover, .book-no-edit-icon:hover {
+  opacity: 0.5;
+}
+
+.book-show-title {
+  margin-top: 0px;
+  padding: 10px;
+  text-align: center;
+  font-size: 17px;
+  position: absolute;
+  color: white;
+  bottom: 0px;
+  margin-bottom: 46px;
+  background-color: grey;
+  width: 100%;
+}
+
+.book-show-img {
+  margin-top: 0px;
+  width: 100%;
+}

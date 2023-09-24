@@ -1,0 +1,77 @@
+import React, { useState } from 'react';
+import { BiSolidEditAlt } from 'react-icons/bi';
+import { MdDeleteForever } from 'react-icons/md'
+
+
+import BookEdit, { EditState } from './BookEdit';
+import { BooksState } from './BookCreate';
+import './BookShow.css';
+
+interface BookShowProps {
+  id: string;
+  appState: BooksState;
+}
+
+const BookShow: React.FC<BookShowProps> = ({id, appState}) => {
+  
+  const {books, setBooks} = appState.states[1]
+ 
+  const book = books.find(book => book.id === id);
+ 
+  const [edit, setEdit] = useState(false);
+  const [title, setTitle] = useState(book?.title || '');
+
+  const editState: EditState = {
+    states: [
+      {title, setTitle},
+      {edit, setEdit}
+    ]
+  }
+
+  const handleDelete = () => {
+    const newBooks = books.filter(book=> book.id !== id) ;
+    setBooks(newBooks);
+  }
+
+  const handleEditClicked: React.MouseEventHandler<HTMLDivElement> = () => {
+    if (edit) {
+      setEdit(false);
+      // restore the unmodified text
+      const book = books.find(book => book.id === id);
+      setTitle(book!.title);
+    } else {
+      setEdit(true);
+    }
+  } 
+
+  const ifEditClass = () => {
+    return edit ? "book-edit-icon" : "book-no-edit-icon";  
+  }
+
+  const viewBook = () => {
+    if (edit) {
+      return  <BookEdit id={id} appState={appState} editState={editState}/>
+    }
+    return <>
+      <div className='book-show-title'>{title}</div>
+    </>
+  }
+  
+  return (
+    <div key={id} className='book-show-details'> 
+        <img className='book-show-img'
+          alt="books"
+          src={`https://picsum.photos/seed/${id}/200/300`}
+        />
+
+      {viewBook()}
+      <div className='book-controls'>
+        <div className={ifEditClass()} onClick={handleEditClicked}><BiSolidEditAlt/></div>
+        <div className="book-delete-icon" onClick={handleDelete}><MdDeleteForever /></div>
+      </div>
+ 
+    </div>
+  )
+}
+
+export default BookShow;

@@ -1,0 +1,33 @@
+.book-form-edit{
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+.book-form-edit * {
+  flex: 1;
+  margin: 0 10px;
+}
+.save-button {
+  border-width: 0.2px;
+  background-color: forestgreen;
+  border-radius: 5px;
+  padding: 4px 10px;
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+.book-edit-input {
+  text-align: center;
+  font-size: 15px;
+  padding: 5px;
+  max-width: 90%;
+  color: #000000;
+  background-color: #fefcfc78;
+  border-width: 0.1px;
+  border-radius: 3px;
+}
+
