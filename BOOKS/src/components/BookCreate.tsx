@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { Dispatch, SetStateAction } from 'react';
 
 export interface Book {
@@ -25,14 +26,14 @@ const BookCreate: React.FC<BookCreateProps> = ({appState}) => {
   const { books, setBooks } = appState.states[1];
   const { booksListRef } = appState.refs;
 
-  const handleOnSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
+  const handleOnSubmit: React.FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
+    const response = await axios.post('http://localhost:3001/books', {
+      title
+    });
+
     if (!title) return;
-    const newBook: Book = {
-      id: Math.random().toString(36).substring(2,9),
-      title 
-    }
-    setBooks([...books, newBook]);
+    setBooks([...books, response.data]);
     setTitle('')
     if(booksListRef.current){
       booksListRef.current.scrollTop = booksListRef.current.scrollHeight;

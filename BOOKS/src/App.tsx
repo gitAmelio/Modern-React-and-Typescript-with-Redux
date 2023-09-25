@@ -19,8 +19,6 @@ const App = () => {
     }
   }
 
-  console.log(books)
-
   return (
     <>
       <h1 className='reading-list'> Reading List</h1>

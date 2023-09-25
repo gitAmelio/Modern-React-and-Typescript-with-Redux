@@ -6,6 +6,7 @@ import { MdDeleteForever } from 'react-icons/md'
 import BookEdit, { EditState } from './BookEdit';
 import { BooksState } from './BookCreate';
 import './BookShow.css';
+import axios from 'axios';
 
 interface BookShowProps {
   id: string;
@@ -28,7 +29,9 @@ const BookShow: React.FC<BookShowProps> = ({id, appState}) => {
     ]
   }
 
-  const handleDelete = () => {
+  const handleDelete = async () => {
+    const response = await axios.delete(`http://localhost:3001/books/${id}`);
+    console.log(response)
     const newBooks = books.filter(book=> book.id !== id) ;
     setBooks(newBooks);
   }

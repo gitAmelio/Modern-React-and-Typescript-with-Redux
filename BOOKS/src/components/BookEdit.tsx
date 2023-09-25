@@ -1,6 +1,7 @@
 import './BookEdit.css';
 import React from 'react';
 import { Book, BooksState } from './BookCreate';
+import axios from 'axios';
 
 export type EditState = {
   states: [
@@ -24,12 +25,16 @@ const BookEdit: React.FC<BookEditProps> = ({id, appState, editState}) => {
   const {setEdit } = editState.states[1];
 
   
-  const updateBooks = () => {
+  const updateBooks = async () => {
     const index = books.findIndex(book => book.id === id);
     const updatedBook: Book = {id, title};
+
+    const response = await axios.put(`http://localhost:3001/books/${id}`,updatedBook)
+
     const newBooks = [
       ...books.slice(0,index), 
-      updatedBook, 
+      // updatedBook,
+      response.data, 
       ...books.slice(index+1)
     ] 
     setBooks(newBooks);
