@@ -2,7 +2,6 @@ import './style.css';
 import BookCreate from './components/BookCreate';
 import BookList from './components/BookList';
 
-
 const App = () => {
   return (
     <>

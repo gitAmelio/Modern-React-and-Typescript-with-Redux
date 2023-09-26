@@ -1,11 +1,11 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { BiSolidEditAlt } from 'react-icons/bi';
 import { MdDeleteForever } from 'react-icons/md'
 
 import BookEdit, { EditState } from './BookEdit';
-import BooksContext from '../context/books';
 import './BookShow.css';
 import axios from 'axios';
+import { useBookContext } from '../hooks/use-hooks-context';
 
 interface BookShowProps {
   id: string;
@@ -13,7 +13,7 @@ interface BookShowProps {
 
 const BookShow: React.FC<BookShowProps> = ({id}) => {
   
-  const bookState = useContext(BooksContext);
+  const bookState = useBookContext();
 
   const { books, setBooks } = bookState!.states[0];
  

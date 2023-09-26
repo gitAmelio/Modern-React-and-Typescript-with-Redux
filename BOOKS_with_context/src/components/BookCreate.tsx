@@ -1,12 +1,12 @@
 import axios from 'axios';
-import React, { useContext, useState } from 'react';
-import BooksContext from '../context/books';
+import React, { useState } from 'react';
+import { useBookContext } from '../hooks/use-hooks-context';
 
 const BookCreate: React.FC = () => {
 
   const [ title, setTitle ] = useState<string>('')
 
-  const bookState = useContext(BooksContext);
+  const bookState = useBookContext();
 
   const { books, setBooks } = bookState!.states[0];
   const { booksListRef } = bookState!.refs;

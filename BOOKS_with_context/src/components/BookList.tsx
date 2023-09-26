@@ -1,11 +1,11 @@
-import React, { useEffect, useContext } from 'react';
-import BooksContext from '../context/books';
+import React, { useEffect } from 'react';
+import { useBookContext } from '../hooks/use-hooks-context';
 import BookShow from './BookShow';
 import axios from 'axios';
 
 const BookList: React.FC = () => {
 
-  const bookState = useContext(BooksContext);
+  const bookState = useBookContext();
 
   const { books, setBooks } = bookState!.states[0];
   const { booksListRef } = bookState!.refs;

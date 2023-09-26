@@ -1,7 +1,8 @@
 import './BookEdit.css';
-import React, {useContext} from 'react';
-import BooksContext, { Book } from '../context/books';
+import React from 'react';
+import { Book } from '../context/books';
 import axios from 'axios';
+import { useBookContext } from '../hooks/use-hooks-context';
 
 export type EditState = {
   states: [
@@ -17,7 +18,7 @@ interface BookEditProps {
 
 const BookEdit: React.FC<BookEditProps> = ({id, editState}) => {
 
-  const bookState = useContext(BooksContext);
+  const bookState = useBookContext();
 
   const { books, setBooks } = bookState!.states[0];
 
