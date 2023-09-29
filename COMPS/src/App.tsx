@@ -1,23 +1,15 @@
-import Button from "./Button";
+import StdFilledButtons from './StdFilledButtons';
+import PillClearButtons from "./PillClearButtons";
+import PillFIlledButtons from "./PillFilledButtons";
+import StdClearButtons from "./StdClearButtons";
 
 const App = () => {
   return (
-    <div className='app'>
-      <div>
-        <Button outlined purpose={"primary"}>Click here!!!</Button>
-      </div>
-      <div>
-        <Button rounded>Buy Now!</Button>
-      </div>
-      <div>
-        <Button>See Deal!</Button>
-      </div>
-      <div>
-        <Button>Hide Ads</Button>
-      </div>
-      <div>
-        <Button>Something!</Button>
-      </div>
+    <div className="app flex flex-row items-center">
+      <StdFilledButtons />
+      <StdClearButtons />
+      <PillFIlledButtons />
+      <PillClearButtons />
     </div>
   )
 }
