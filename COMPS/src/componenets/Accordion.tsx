@@ -3,7 +3,7 @@ import { PiCaretDownFill, PiCaretLeftFill } from "react-icons/pi";
 
 export type AccordionItems = { id: string, label: string, content: string }[];
 
-export interface AccordionProps {
+interface AccordionProps {
   items: AccordionItems;
 }
 
