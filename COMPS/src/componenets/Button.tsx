@@ -68,7 +68,7 @@ const Button: React.FC<ButtonProps>  = ({
   ...rest
 }) => {
   
-  let classes = classNames(rest.className, 'flex items-center m-2 h-8 w-80 px-3 py-1.5 border max-w-[50%]',{
+  let classes = classNames(rest.className, 'w-[100%] button flex flex-1 items-center m-2 h-8 px-3 py-1.5 border',{
     'border-blue-500 bg-blue-500 text-white': primary,
     'border-gray-900 bg-gray-900 text-white': secondary,
     'border-green-500 bg-green-500 text-white': success,

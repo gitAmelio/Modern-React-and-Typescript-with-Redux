@@ -20,9 +20,8 @@ const items: AccordionItems = [
 
 const AccordionPage = () => {
   return (
-    <div className="">
-      <Accordion items={items}/>
-    </div>
+    
+      <Accordion items={items} className="with" />
   )
 }
 

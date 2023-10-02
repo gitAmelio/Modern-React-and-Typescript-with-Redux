@@ -25,10 +25,11 @@ const DropDownPage = () => {
   const [selection, setSelection] = useState<string|null>(null)
 
   return (
-    <div className="app flex flex-row">
+    // <div className="flex flex-row">
+    <>
       <Dropdown value={selection!} onChange={setSelection} options={options}/>
       {/* <Dropdown value={selection!} onChange={setSelection} options={options}/> */}
-    </div>
+    </>
   )
 }
 

@@ -57,7 +57,7 @@ const Dropdown: React.FC<DropdownProps> = ({
   } 
 
   return(
-    <div ref={divEl} className="w-48 relative">
+    <div ref={divEl} className="w-48 relative flex-1">
       <Panel className="flex justify-between items-center cursor-pointer border" onClick={handleOnClick}>
         {value ? value : 'Select...'}
         {isOpen ? <PiCaretDownFill className="text-lg" /> : <PiCaretLeftFill className="text-lg" /> }

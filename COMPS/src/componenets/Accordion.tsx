@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { PiCaretDownFill, PiCaretLeftFill } from "react-icons/pi";
+import { twMerge } from "tailwind-merge";
 
 export type AccordionItems = { id: string, label: string, content: string }[];
 
 interface AccordionProps {
   items: AccordionItems;
+  [key: string]: any;
 }
 
-const Accordion: React.FC<AccordionProps> = ({items}) => {
+const Accordion: React.FC<AccordionProps> = ({items, ...rest}) => {
 
   const [ expandedId, setExpandedId ] = useState<string|null>(null);
 
@@ -37,7 +39,10 @@ const Accordion: React.FC<AccordionProps> = ({items}) => {
 
     })
   }
-  return <div className="border-x border-t rounded">
+
+  const {className} = rest;
+
+  return <div {...rest} className={twMerge("border-x border-t rounded flex-1",className)}>
     {renderItems()}
   </div>
 }
