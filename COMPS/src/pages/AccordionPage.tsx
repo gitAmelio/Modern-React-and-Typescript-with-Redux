@@ -1,4 +1,4 @@
-import Accordion, { AccordionItems } from "../componenets/Accordion";
+import Accordion, { AccordionItems } from "../components/Accordion";
 
 const items: AccordionItems = [
   {

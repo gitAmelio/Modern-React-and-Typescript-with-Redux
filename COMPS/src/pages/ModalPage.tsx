@@ -1,5 +1,5 @@
-import Modal from "../componenets/Modal"
-import Button from "../componenets/Button";
+import Modal from "../components/Modal"
+import Button from "../components/Button";
 import { useState } from "react";
 
 const ModalPage = () => {
@@ -12,7 +12,6 @@ const ModalPage = () => {
   } 
   
   const handleAccept = () => {
-    console.log('accepting', accept)
     setAccept(!accept);
     setIsShowing(!isShowing)
   }

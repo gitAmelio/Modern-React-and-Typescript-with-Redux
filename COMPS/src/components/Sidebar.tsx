@@ -8,12 +8,12 @@ const Sidebar = () => {
     {label: 'Accordion', path: '/accordion', activeClassName: false},
     {label: 'Buttons', path: '/button', activeClassName: false},
     {label: 'Modal', path: '/modal', activeClassName: false},
+    {label: 'Tabel', path: '/table', activeClassName: false},
   ]
 
   const [activePage, setActivePage] = useState<string>('');
 
   const handleOnChange = (linkLable: string) => {
-    console.log(linkLable)
     setActivePage(linkLable);    
   }
 

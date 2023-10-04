@@ -1,7 +1,7 @@
-import StdFilledButtons from "../componenets/StdFilledButtons";
-import PillClearButtons from "../componenets/PillClearButtons";
-import PillFIlledButtons from "../componenets/PillFilledButtons";
-import StdClearButtons from "../componenets/StdClearButtons";
+import StdFilledButtons from "../components/StdFilledButtons";
+import PillClearButtons from "../components/PillClearButtons";
+import PillFIlledButtons from "../components/PillFilledButtons";
+import StdClearButtons from "../components/StdClearButtons";
 
 const ButtonPage = () => {
   return (

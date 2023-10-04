@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Dropdown from "../componenets/Dropdown";
+import Dropdown from "../components/Dropdown";
 
 const options = [
   {
