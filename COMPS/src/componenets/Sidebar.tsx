@@ -7,6 +7,7 @@ const Sidebar = () => {
     {label: 'Dropdown', path: '/', activeClassName: false},
     {label: 'Accordion', path: '/accordion', activeClassName: false},
     {label: 'Buttons', path: '/button', activeClassName: false},
+    {label: 'Modal', path: '/modal', activeClassName: false},
   ]
 
   const [activePage, setActivePage] = useState<string>('');

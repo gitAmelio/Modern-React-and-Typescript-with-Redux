@@ -68,6 +68,8 @@ const Button: React.FC<ButtonProps>  = ({
   ...rest
 }) => {
   
+  const { className } = rest;
+
   let classes = classNames(rest.className, 'w-[100%] button flex flex-1 items-center m-2 h-8 px-3 py-1.5 border',{
     'border-blue-500 bg-blue-500 text-white': primary,
     'border-gray-900 bg-gray-900 text-white': secondary,
@@ -85,9 +87,8 @@ const Button: React.FC<ButtonProps>  = ({
   if (outlined && warning) classes = twMerge(classes,  'text-yellow-400 bg-white');
   if (outlined && danger)  classes = twMerge(classes, 'text-red-500 bg-white');
 
-  // const newClasses = classes.split(' ').map
+  classes = twMerge(classes, className);
 
-   console.log(classes)
   return <button {...rest} className={classes}>{children}</button>
 }
 
