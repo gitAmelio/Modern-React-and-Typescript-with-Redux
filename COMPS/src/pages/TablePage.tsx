@@ -1,5 +1,6 @@
-import Table from '../components/Table'
-import { configData } from '../components/Table'
+// import Table from '../components/Table'
+import SortableTable from '../components/SortableTable'
+import { configData, randomId } from '../components/Table'
 
 const TablePage = () => {
 
@@ -14,14 +15,17 @@ const TablePage = () => {
     {
       label: 'Name',
       render: ({name}) => name,
-    },
+      sortValue: ({name}) => name,
+    }, 
     {
       label: 'Color',
       render: ({color}) => <div className={`p-2 m-3 ${color}`}></div>
     },
     {
       label: 'Score',
-      render: ({score}) => score
+      render: ({score}) => score,
+      sortValue: ({score}) => score,
+      // header: () => <th key={randomId()}  className="bg-red-500">Score</th>
     },
     {
       label: 'More',
@@ -31,7 +35,7 @@ const TablePage = () => {
 
   return (
     <div>
-      <Table data={data} config={config} />
+      <SortableTable data={data} config={config} />
     </div>
   )
 
