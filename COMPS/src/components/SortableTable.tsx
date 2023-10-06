@@ -17,6 +17,7 @@ const SortableTable: React.FC<SortableTableProps> = ({...props}) => {
       console.log('a jump')
       setSortOrder('asc');
       setSortBy(label);
+      return;
     }
 
     if (sortOrder === null) {
@@ -78,8 +79,11 @@ const SortableTable: React.FC<SortableTableProps> = ({...props}) => {
   }
 
   const updatedProps = {...props, config: updatedConfig, data: sortedData }
-
-  return <Table {...updatedProps} />
+  
+  return <>
+  {sortOrder} - {sortBy}
+  <Table {...updatedProps} />
+  </>
 } 
 
 export default SortableTable;
