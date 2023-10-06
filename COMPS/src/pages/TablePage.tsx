@@ -1,6 +1,6 @@
 // import Table from '../components/Table'
 import SortableTable from '../components/SortableTable'
-import { configData, randomId } from '../components/Table'
+import { configData } from '../components/Table'
 
 const TablePage = () => {
 
@@ -25,7 +25,6 @@ const TablePage = () => {
       label: 'Score',
       render: ({score}) => score,
       sortValue: ({score}) => score,
-      // header: () => <th key={randomId()}  className="bg-red-500">Score</th>
     },
     {
       label: 'More',

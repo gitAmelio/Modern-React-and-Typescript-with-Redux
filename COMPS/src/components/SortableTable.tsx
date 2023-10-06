@@ -12,7 +12,7 @@ const SortableTable: React.FC<SortableTableProps> = ({...props}) => {
   const [sortBy, setSortBy] = useState<string | null>(null);
   const { config, data } = props;
 
-  const handleClick = (label: React.SetStateAction<string | null>) => {
+  const handleClick = (label: string) => {
     if (sortBy && label !== sortBy) {
       console.log('a jump')
       setSortOrder('asc');
@@ -21,10 +21,10 @@ const SortableTable: React.FC<SortableTableProps> = ({...props}) => {
 
     if (sortOrder === null) {
       setSortOrder('asc');
-      setSortBy(label! as React.SetStateAction<string | null>);
+      setSortBy(label);
     } else if (sortOrder === 'asc') {
       setSortOrder('desc');
-      setSortBy(label as React.SetStateAction<string | null>);
+      setSortBy(label);
     } else if (sortOrder === 'desc') {
       setSortOrder(null);
       setSortBy(label);
