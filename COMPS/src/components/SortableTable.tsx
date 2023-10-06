@@ -80,10 +80,8 @@ const SortableTable: React.FC<SortableTableProps> = ({...props}) => {
 
   const updatedProps = {...props, config: updatedConfig, data: sortedData }
   
-  return <>
-  {sortOrder} - {sortBy}
-  <Table {...updatedProps} />
-  </>
+  return <Table {...updatedProps} />
+  
 } 
 
 export default SortableTable;
