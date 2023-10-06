@@ -9,6 +9,7 @@ const Sidebar = () => {
     {label: 'Buttons', path: '/button', activeClassName: false},
     {label: 'Modal', path: '/modal', activeClassName: false},
     {label: 'Tabel', path: '/table', activeClassName: false},
+    {label: 'Counter', path: '/counter', activeClassName: false},
   ]
 
   const [activePage, setActivePage] = useState<string>('');

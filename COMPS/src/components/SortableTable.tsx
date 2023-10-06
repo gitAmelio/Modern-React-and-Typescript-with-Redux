@@ -1,36 +1,18 @@
-import React, { useState } from "react";
-import Table, { TableProps, configData, randomId } from "./Table";
+import React from "react";
+import Table, { TableProps,  randomId } from "./Table";
 import { PiCaretUpDownBold, PiCaretUpBold, PiCaretDownBold } from "react-icons/pi";
-
+import useSort from "../hooks/use-sort";
 
 interface SortableTableProps extends TableProps {
   // [key: string]: any;
 }
 
 const SortableTable: React.FC<SortableTableProps> = ({...props}) => {
-  const [sortOrder, setSortOrder] = useState<string | null>(null);
-  const [sortBy, setSortBy] = useState<string | null>(null);
+
   const { config, data } = props;
 
-  const handleClick = (label: string) => {
-    if (sortBy && label !== sortBy) {
-      console.log('a jump')
-      setSortOrder('asc');
-      setSortBy(label);
-      return;
-    }
+  const { sortedData, sortOrder, sortBy, setSort } = useSort({data, config})
 
-    if (sortOrder === null) {
-      setSortOrder('asc');
-      setSortBy(label);
-    } else if (sortOrder === 'asc') {
-      setSortOrder('desc');
-      setSortBy(label);
-    } else if (sortOrder === 'desc') {
-      setSortOrder(null);
-      setSortBy(label);
-    }
-  }
 
   const getIcons = (label: string, sortBy: string | null , sortOrder: string | null ) => {
     if (label !== sortBy) {
@@ -51,32 +33,12 @@ const SortableTable: React.FC<SortableTableProps> = ({...props}) => {
 
     return {
       ...column,
-      header: () => <th className="flex flex-row cursor-pointer hover:bg-gray-100 items-center" key={randomId()} onClick={() => handleClick(column.label)}>
+      header: () => <th className="flex flex-row cursor-pointer hover:bg-gray-100 items-center" key={randomId()} onClick={() => setSort(column.label)}>
         {getIcons(column.label, sortBy, sortOrder)}
         {column.label}
         </th>
     }
   });
-
-  let sortedData = data;
-  if (sortOrder && sortBy) {
-    const {sortValue} = config.find(column => column.label === sortBy) as configData;
-
-    if (sortValue ){
-      sortedData = [...data].sort((a,b) => {
-        const valueA = sortValue(a);
-        const valueB = sortValue(b);
-
-        const order = sortOrder === 'asc' ? 1 : -1;
-
-        if (typeof valueA === 'string') {
-          return valueA.localeCompare(valueB) * order;
-        } else {
-          return (valueA - valueB) * order;
-        }
-      })
-    }
-  }
 
   const updatedProps = {...props, config: updatedConfig, data: sortedData }
   
