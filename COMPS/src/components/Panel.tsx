@@ -2,7 +2,7 @@ import { twMerge } from "tailwind-merge";
 
 interface PanelProps  {
   children: React.ReactNode;
-  className: string;
+  className?: string;
   [key: string]: any;  // ...rest
 }
 

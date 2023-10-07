@@ -29,7 +29,7 @@ const SortableTable: React.FC<SortableTableProps> = ({...props}) => {
   }
 
   const updatedConfig = config.map((column) => {
-    if (!column.sortValue) return column;
+    if (!column.sortValue) return column; 
 
     return {
       ...column,
