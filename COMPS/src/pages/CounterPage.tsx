@@ -34,7 +34,6 @@ const reducer = (state: CountState, action: CountAction): CountState => {
       // return {...state, valueToAdd:0 , count: state.count + state.valueToAdd};
       state.count = state.count + state.valueToAdd;
       state.valueToAdd = 0;
-      console.log(state.count, state.valueToAdd)
       return state;
     case CountActionType.VALUECHANGE:
       if (action.payload === undefined) return state; 
