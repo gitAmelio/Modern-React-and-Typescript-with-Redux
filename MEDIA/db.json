@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Myra"
+    },
+    {
+      "name": "Doris Daniel",
+      "id": 2
+    },
+    {
+      "name": "Mrs. Audrey Prohaska-Hickle",
+      "id": 3
+    },
+    {
+      "name": "Elisa Keebler",
+      "id": 4
+    },
+    {
+      "name": "Ms. Tara Lindgren",
+      "id": 5
+    },
+    {
+      "name": "Natalie West",
+      "id": 6
+    }
+  ],
+  "albums": [],
+  "photos": []
+}
