@@ -17,14 +17,112 @@
       "id": 4
     },
     {
-      "name": "Ms. Tara Lindgren",
-      "id": 5
-    },
-    {
       "name": "Natalie West",
       "id": 6
     }
   ],
-  "albums": [],
-  "photos": []
+  "albums": [
+    {
+      "userId": 1,
+      "title": "Unbranded Bronze Pizza",
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "title": "Recycled Frozen Table",
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "title": "Generic Granite Towels",
+      "id": 15
+    },
+    {
+      "userId": 3,
+      "title": "Handmade Frozen Table",
+      "id": 17
+    }
+  ],
+  "photos": [
+    {
+      "albumId": 8,
+      "url": "https://loremflickr.com/150/150?lock=1789584128081920",
+      "id": 1
+    },
+    {
+      "albumId": 14,
+      "url": "https://picsum.photos/seed/xwJbsX/150/150",
+      "id": 2
+    },
+    {
+      "albumId": 14,
+      "url": "https://loremflickr.com/150/150?lock=7897028751261696",
+      "id": 3
+    },
+    {
+      "albumId": 8,
+      "url": "https://loremflickr.com/150/150?lock=5723307942871040",
+      "id": 4
+    },
+    {
+      "albumId": 14,
+      "url": "https://loremflickr.com/150/150?lock=2994875953840128",
+      "id": 5
+    },
+    {
+      "albumId": 8,
+      "url": "https://picsum.photos/seed/HFAptT3/150/150",
+      "id": 7
+    },
+    {
+      "albumId": 8,
+      "url": "https://picsum.photos/seed/jbzkq2/150/150",
+      "id": 8
+    },
+    {
+      "albumId": 8,
+      "url": "https://picsum.photos/seed/F3i26j/150/150",
+      "id": 9
+    },
+    {
+      "albumId": 8,
+      "url": "https://picsum.photos/seed/yCBzC/150/150",
+      "id": 11
+    },
+    {
+      "albumId": 8,
+      "url": "https://loremflickr.com/150/150?lock=3273104813981696",
+      "id": 12
+    },
+    {
+      "albumId": 14,
+      "url": "https://picsum.photos/seed/nR2wptK6/150/150",
+      "id": 13
+    },
+    {
+      "albumId": 14,
+      "url": "https://loremflickr.com/150/150?lock=3823897654853632",
+      "id": 14
+    },
+    {
+      "albumId": 14,
+      "url": "https://loremflickr.com/150/150?lock=8052132726964224",
+      "id": 15
+    },
+    {
+      "albumId": 14,
+      "url": "https://picsum.photos/seed/K7EhKHeY/150/150",
+      "id": 16
+    },
+    {
+      "albumId": 14,
+      "url": "https://loremflickr.com/150/150?lock=4300461813268480",
+      "id": 17
+    },
+    {
+      "albumId": 14,
+      "url": "https://picsum.photos/seed/FFL2X/150/150",
+      "id": 18
+    }
+  ]
 }

@@ -2,6 +2,7 @@ import className from 'classnames';
 import { disable } from 'ol/rotationconstraint';
 import React from 'react';
 import { GoSync } from 'react-icons/go';
+import { twMerge } from 'tailwind-merge';
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -50,7 +51,7 @@ const Button = ({
   );
 
   return (
-    <button {...rest} disabled={loading} className={classes}>
+    <button {...rest} disabled={loading} className={twMerge(classes)}>
       {loading ?<GoSync className="animate-spin" /> : children}
     </button>
   );
